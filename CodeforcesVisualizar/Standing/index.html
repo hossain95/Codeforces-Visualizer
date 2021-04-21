@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo"><a href="#">CF Helper</a></label>
+            <ul>
+                <li><a class="active" href="/HomePage/index.html">Home</a></li>
+                <li><a href="#" onclick="University()" id="universitystanding">University Standing</a></li>
+                <li><a href="#" onclick="Country()" id="countrystanding" >Country Standing</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="Container">
+        <div class="main-container">
+            <!--University Standing input-->
+            <div class="unversity-standing" id="organizationdiv">
+                <div class="form-hold">
+                    <form id="form">
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center; color: white;margin-bottom: 10px;">
+                            <div>
+                                <h3>Find University Standing</h3>
+                            </div>
+                        </div>
+                        <div class="org">
+                            <input id="organization" type="text" placeholder="Organization">
+                        </div>
+                        <div class="contest">
+                            <input id="contestid" type="text" placeholder="Contest id">
+                        </div>
+                        <div class="submit">
+                            <input id="submit" onclick="Loadingu()" type="submit" value="FIND">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--Country Standing input-->
+            <div class="country-standing" id="countrydiv" style="display: none;">
+                <div class="form-hold">
+                    <form id="form2">
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center; color: white;margin-bottom: 10px;">
+                            <div>
+                                <h3>Find Country Standing</h3>
+                            </div>
+                        </div>
+                        <div class="org">
+                            <input id="country" type="text" placeholder="Country">
+                        </div>
+                        <div class="contest">
+                            <input id="contestid2" type="text" placeholder="Contest id">
+                        </div>
+                        <div class="submit">
+                            <input id="submit2" onclick="Loadingc()" type="submit" value="FIND">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h4 id="h4" style="width: 100%; text-align: center;"></h4>
+            <!--University Standing output-->
+            <div class="dataCounterUniversity">
+                <div id="div" class="div">
+                    <table id="table" style="display: none;">
+                        <tr style="background-color: #0082e6; height: 50px; color: white; font-size: 20px; font-weight: bolder;box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.2);">
+                            <th id="orgname" colspan="4"></th>
+                        </tr>
+                        <tr style="background-color: #0082e6; height: 50px; color: white; font-size: 20px; font-weight: bolder;box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.2);">
+                            <th style="width: 15%;">#</th>
+                            <th style="width: 35%;">Standing</th>
+                            <th style="width: 35%;">Handle</th>
+                            <th style="width: 15%;">Points</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--Country Standing output-->
+            <div class="dataCounterUniversity">
+                <div id="div1" class="div1">
+                    <table id="table1" style="display: none;">
+                        <tr style="background-color: #0082e6; height: 50px; color: white; font-size: 20px; font-weight: bolder;box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.2);">
+                            <th id="countryname" colspan="4"></th>
+                        </tr>
+                        <tr style="background-color: #0082e6; height: 50px; color: white; font-size: 20px; font-weight: bolder;box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.2);">
+                            <th style="width: 15%;">#</th>
+                            <th style="width: 35%;">Standing</th>
+                            <th style="width: 35%;">Handle</th>
+                            <th style="width: 15%;">Points</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="country_script.js"></script>
+
+
+    <script>
+        function Country()
+        {
+            document.getElementById("organizationdiv").style.display = "none";
+            document.getElementById("countrydiv").style.display = "";
+        }   
+        function University()
+        {
+            document.getElementById("organizationdiv").style.display = "";
+            document.getElementById("countrydiv").style.display = "none";
+        }
+
+        function Loadingc()
+        {
+            document.getElementById("h4").style.display = "";
+            document.getElementById("h4").innerText = "Please Wait.."
+        }
+        function Loadingu()
+        {
+            document.getElementById("h4").style.display = "";
+            document.getElementById("h4").innerText = "Please Wait.."
+        }
+    </script>
+</body>
+</html>
