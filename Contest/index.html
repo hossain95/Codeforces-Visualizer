@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo"><a href="/Home Page/index.html">CF Helper</a></label>
+            <ul>
+                <li><a class="active" href="/Home Page/index.html">Home</a></li>
+                <li><a href="/Standing/index.html">Standing</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="Container" id="fullcontainer" style="display: none;">
+        <div class="UpCommingContest">
+            <div class="div">
+                <div class="div1">
+                    <h1 id="upcomming"></h1>
+                   <div class="ContainTable" id="upcommingcontest" style="margin-top: 50px;">
+                   </div>
+                </div>
+                <div class="div1">
+                    <h1 id="previous"></h1>
+                    <div class="ContainTable" id="previouscontest" style="margin-top: 50px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="scriptprevious.js"></script>
+</body>
+</html>
