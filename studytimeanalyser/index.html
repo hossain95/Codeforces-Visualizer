@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal routine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <!--Header Start-->
+    <header>
+        <div class="left">
+            <ul>
+                <li><a href="#" onclick="reloadHome()">Home</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="#">Add Subject</a></li>
+                <li><a href="#">Insert Time</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--Header End-->
+    <!--Insert time start-->
+    <div id="bodyid" class="fullbody">
+        <div class="container1">
+            <div class="contain-form" id="containfromid1">
+                <h2>Store Your Study Time</h2>
+                <form id="form1" method="POST" action="connectToDatebaseForStoreTime.php">
+                    <div class="subject-add" id="insertHere">
+                        <p style="font-weight: bold;">Choose a Subject</p>
+                        <div>
+                            <p id="p1">add a subject</p>
+                            <!--
+                            <input type="radio" name="subject" value="programming">
+                            <label>Programming</label>
+                            -->
+                        </div>
+                    </div>
+                    <div class="total-time">
+                        <p style="font-weight: bold;">Enter Study Time in Minutes</p>
+                        <label for="time">Time:</label>
+                        <input type="text" id="time" name="time">
+
+                        <label for="time">Date:</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <input type="submit" id="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="container2">
+            <div id="containfromid2">
+                <div class="add-new-subject">
+                    <h2>Add New Subject</h2>
+                    <form id="form2" method="POST" action="connectToDatabaseForStoreSubject.php">
+                        <input type="text" placeholder="add new subject" id="addnewsubject" name="addnewsubject">
+                        <input type="submit" value="ADD" id="last">
+                    </form>
+                </div>
+                <div class="add-new-subject">
+                    <h2>Delete a Subject</h2>
+                    <form id="form3" method="POST" action="connectToDatabaseForDeleteSubject.php">
+                        <input type="text" placeholder="delete a subject" id="deleteasubject" name="deleteasubject">
+                        <input type="submit" value="DELETE" id="delete">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Insert time end-->
+    <!--show here start-->
+    <div class="container3" id="container3" style="display: none;">
+        <div class="showHere">
+            <div class="sameClass">
+                <h1 id="h2"></h1>
+                <canvas id="lastSevenDays">
+                    
+                </canvas>
+            </div>
+            <div class="sameClass">
+                <h1 id="h3"></h1>
+                <canvas id="lastMonth">
+                    
+                </canvas>
+            </div>
+            <div class="sameClass">
+                <h1 id="h1"></h1>
+                <canvas id="showAll">
+                    
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <!--show here end-->
+    <div id="loadhere">
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="programming.js"></script>
+    <script>
+        function reloadHome()
+        {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

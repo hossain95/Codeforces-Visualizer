@@ -1,0 +1,154 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+.fullbody
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header
+{
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    height: 70px;
+    width: 100%;
+    background: #2E94EF;
+    font-size: 20px;
+    font-weight: bold;
+}
+.left
+{
+    float: left;
+}
+.right
+{
+    float: right;
+    margin-right: 70px;
+}
+.left ul
+{
+    display: flex;
+}
+.right ul
+{
+    display: flex;
+}
+.right ul li
+{
+    margin-left: 20px;
+}
+ul
+{
+    list-style-type: none;
+}
+ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.total-time input[type="text"]
+{
+    width: 80px;
+    height: 20px;
+}
+.total-time input[type="date"]
+{
+    width: 150px;
+    height: 25px;
+}
+.add-new-subject
+{
+    margin-top: 22px;
+}
+.add-new-subject input[type="text"]
+{
+    height: 25px;
+}
+.add-new-subject input[type="submit"]
+{
+    height: 30px;
+    width: 80px;
+    margin-left: -5px;
+}
+#form1 input[type="submit"]
+{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    height: 30px;
+    width: 80px;
+    background-color:blue;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+}
+.container1
+{
+    background-color: #E4EBF3;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 600px;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-width: 1px;
+    border-right-style: solid;
+    font-size: 20px;
+}
+.container2
+{
+    background-color:#E4EBF3;
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 600px;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.container3
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 100px;
+}
+.sameClass
+{
+    border-style: solid;
+    border-width: 1px;
+    width: 800px;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.sameClass canvas
+{
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+}
+h1
+{
+    text-align: center;
+}
